@@ -141,3 +141,40 @@ section {
     background: #333;
     color: #fff;
 }
+/* Add this to your CSS */
+.navbar {
+    display: flex;
+    gap: 1rem;
+}
+
+#menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #333;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar a {
+        padding: 1rem;
+        color: #fff;
+        border-bottom: 1px solid #444;
+    }
+}
