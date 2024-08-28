@@ -35,20 +35,34 @@ body {
 }
 
 .header .navbar {
-    display: flex;
-    gap: 1.5rem;
+    display: none; /* Hide by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #292b2c;
+    width: 100%;
+    text-align: center;
 }
 
 .header .navbar a {
+    padding: 1rem;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    border-bottom: 1px solid #444;
 }
 
 .header .navbar a.active, .header .navbar a:hover {
     color: #007bff;
     border-bottom: 2px solid #007bff;
+}
+
+.header #menu-icon {
+    display: none; /* Hide on larger screens */
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
 }
 
 /* Home Section */
@@ -169,7 +183,7 @@ section {
 }
 
 .portfolio-item {
-    flex: 1 1 calc(33.333% - 2rem); /* Adjust gap size if needed */
+    flex: 1 1 calc(33.333% - 2rem);
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -179,7 +193,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%; /* Ensures item takes full available height */
+    height: 100%;
 }
 
 .portfolio-item:hover {
@@ -189,7 +203,7 @@ section {
 
 .portfolio-item img {
     width: 100%;
-    height: 200px; /* Fixed height */
+    height: 200px;
     object-fit: cover;
     border-bottom: 1px solid #ddd;
 }
@@ -197,7 +211,6 @@ section {
 .portfolio-item h3 {
     margin: 1rem 0;
     font-size: 1.5rem;
-    flex-shrink: 0; /* Prevents shrinking */
 }
 
 .portfolio-item p {
@@ -205,12 +218,6 @@ section {
     font-size: 1rem;
     color: #555;
     margin: 0;
-    flex-grow: 1; /* Allows the description to grow */
-    display: flex;
-    align-items: center; /* Center vertically */
-    max-height: 100px; /* Optionally limit height */
-    overflow: hidden; /* Hide overflow if text is too long */
-    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
 }
 
 .portfolio-item a.btn {
@@ -223,13 +230,12 @@ section {
     border-radius: 5px;
     transition: background 0.3s;
     display: inline-block;
-    align-self: center; /* Center button */
+    align-self: center;
 }
 
 .portfolio-item a.btn:hover {
     background: #0056b3;
 }
- 
 
 /* Footer */
 .footer {
@@ -242,32 +248,24 @@ section {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .navbar {
+    .header .navbar {
         display: none;
+    }
+
+    .header #menu-icon {
+        display: block;
+    }
+
+    .header .navbar.active {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         position: absolute;
         top: 60px;
         right: 0;
         background: #292b2c;
         width: 100%;
-        text-align: center;
-    }
-
-    .navbar.active {
-        display: flex;
-    }
-
-    #menu-icon {
-        display: block;
-        font-size: 1.5rem;
-        color: #fff;
-        cursor: pointer;
-    }
-
-    .navbar a {
-        padding: 1rem;
-        color: #fff;
-        border-bottom: 1px solid #444;
+        z-index: 999;
     }
 
     .home-content, .home-img {
@@ -285,5 +283,16 @@ section {
 
     .portfolio-item {
         flex: 1 1 calc(100% - 2rem);
+    }
+}
+
+@media (min-width: 769px) {
+    .header .navbar {
+        display: flex; /* Ensure the navbar is flex on larger screens */
+        justify-content: flex-end;
+    }
+
+    .header #menu-icon {
+        display: none; /* Hide the menu icon on larger screens */
     }
 }
