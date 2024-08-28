@@ -20,6 +20,21 @@ body {
     color: #fff;
 }
 
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #007bff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
 .header .logo {
     font-size: 1.5rem;
     text-transform: uppercase;
