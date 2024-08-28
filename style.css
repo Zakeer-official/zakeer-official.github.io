@@ -10,7 +10,6 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
-    background: #f5f5f5;
 }
 
 /* Header */
@@ -19,7 +18,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: #292b2c;
+    background: #333;
     color: #fff;
     position: fixed;
     width: 100%;
@@ -121,6 +120,7 @@ section {
     margin-bottom: 2rem;
     font-size: 2rem;
     color: #007bff;
+    text-align: center;
 }
 
 .skill-list {
@@ -134,6 +134,7 @@ section {
     flex: 1 1 calc(33.333% - 1rem);
     padding: 1.5rem;
     background: #f9f9f9;
+    border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -146,7 +147,7 @@ section {
 
 .skill-item i {
     font-size: 2rem;
-    color: #007bff;
+    color: #333;
     margin-bottom: 1rem;
 }
 
@@ -208,6 +209,9 @@ section {
     flex-grow: 1; /* Allows the description to grow */
     display: flex;
     align-items: center; /* Center vertically */
+    max-height: 100px; /* Optionally limit height */
+    overflow: hidden; /* Hide overflow if text is too long */
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
 }
 
 .portfolio-item a.btn {
@@ -220,13 +224,13 @@ section {
     border-radius: 5px;
     transition: background 0.3s;
     display: inline-block;
+    align-self: center; /* Center button */
 }
 
 .portfolio-item a.btn:hover {
     background: #0056b3;
 }
-
-
+ 
 
 /* Footer */
 .footer {
