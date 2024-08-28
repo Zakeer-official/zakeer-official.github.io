@@ -161,8 +161,6 @@ section {
 }
 
 /* Portfolio Styles */
-/* Portfolio Styles */
-/* Portfolio Styles */
 .portfolio-items {
     display: flex;
     flex-wrap: wrap;
@@ -210,9 +208,6 @@ section {
     flex-grow: 1; /* Allows the description to grow */
     display: flex;
     align-items: center; /* Center vertically */
-    max-height: 100px; /* Optionally limit height */
-    overflow: hidden; /* Hide overflow if text is too long */
-    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
 }
 
 .portfolio-item a.btn {
@@ -225,7 +220,6 @@ section {
     border-radius: 5px;
     transition: background 0.3s;
     display: inline-block;
-    align-self: center; /* Center button */
 }
 
 .portfolio-item a.btn:hover {
