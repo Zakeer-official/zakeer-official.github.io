@@ -28,12 +28,12 @@ document.querySelectorAll('.navbar a').forEach(anchor => {
     });
 });
 
-const menuIcon = document.getElementById('menu-icon');
-const navbar = document.querySelector('.navbar');
+// const menuIcon = document.getElementById('menu-icon');
+// const navbar = document.querySelector('.navbar');
 
-menuIcon.addEventListener('click', () => {
-    navbar.classList.toggle('active');
-});
+// menuIcon.addEventListener('click', () => {
+//     navbar.classList.toggle('active');
+// });
 
 document.getElementById('menu-icon').onclick = function() {
     var navbar = document.querySelector('.navbar');
