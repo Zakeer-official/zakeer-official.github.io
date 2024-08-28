@@ -35,7 +35,7 @@ document.querySelectorAll('.navbar a').forEach(anchor => {
 //     navbar.classList.toggle('active');
 // });
 
-document.getElementById('menu-icon').onclick = function() {
-    var navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('active');
-};
+// document.getElementById('menu-icon').onclick = function() {
+//     var navbar = document.querySelector('.navbar');
+//     navbar.classList.toggle('active');
+// };
