@@ -13,20 +13,22 @@
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo">Portfolio</a>
-        <i class="fa-solid fa-bars" id="menu-icon"></i>
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#portfolio">Projects</a>
-            <a href="contact.html">Contact</a>
-            <button id="theme-toggle" class="text-gray-600 hover:text-gray-900">
-    <i class="fas fa-moon"></i>
-</button>
-        </nav>
-        
-    </header>
+    <a href="index.html" class="logo">Portfolio</a>
+    <i class="fa-solid fa-bars" id="menu-icon"></i>
+    <nav class="navbar">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <div class="dropdown">
+            <a href="project.html">Projects <i class="fa-solid fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                <a href="project.html?project=1">Project 1</a>
+                <a href="project.html?project=2">Project 2</a>
+                <a href="project.html?project=3">Project 3</a>
+            </div>
+        </div>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
     
     <section class="home bg-gray-100 py-16">
     <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
