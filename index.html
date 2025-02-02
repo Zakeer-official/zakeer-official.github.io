@@ -133,8 +133,19 @@
 
     
     <section class="contact" id="contact">
-        <h2>Contact</h2>
+        <div id="contact-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <h2>Contact Me</h2>
         <p>If you're interested in connecting or discussing potential opportunities, feel free to reach out via LinkedIn or GitHub. I look forward to hearing from you!</p>
+        <form id="contact-form">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send</button>
+        </form>
+    </div>
+</div>
         <a href="https://github.com/Zakeer-official" target="_blank" class="btn">Visit GitHub</a>
         <a href="https://www.linkedin.com/in/zakeer7" target="_blank" class="btn">Connect on LinkedIn</a>
     </section>
