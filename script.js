@@ -6,28 +6,6 @@ document.getElementById('menu-icon').addEventListener('click', () => {
     navbar.classList.toggle('active');
 });
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('.navbar a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-        if (window.innerWidth <= 768) {
-            document.querySelector('.navbar').classList.remove('active');
-        }
-    });
-});
-
-// Close navbar on link click (for mobile)
-document.querySelectorAll('.navbar a').forEach(anchor => {
-    anchor.addEventListener('click', () => {
-        if (window.innerWidth <= 768) {
-            document.querySelector('.navbar').classList.remove('active');
-        }
-    });
-});
-
 // GSAP Animations
 gsap.registerPlugin(ScrollTrigger);
 
@@ -92,7 +70,14 @@ gsap.from(".contact", {
     duration: 1,
 });
 
+// Dropdown Menu Toggle
+document.querySelectorAll('.dropdown').forEach(dropdown => {
+    dropdown.addEventListener('click', () => {
+        dropdown.querySelector('.dropdown-content').classList.toggle('active');
+    });
+});
 
+// Dark Mode Toggle
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
@@ -104,6 +89,19 @@ themeToggle.addEventListener('click', () => {
         themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
     }
 });
+
+// Smooth Scrolling (for single-page sections)
+document.querySelectorAll('.navbar a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        if (this.getAttribute('href').startsWith('#')) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
 
 const modal = document.getElementById('contact-modal');
 const openModalBtn = document.getElementById('open-modal');
