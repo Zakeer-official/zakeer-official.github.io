@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>My Personal Portfolio</title>
 </head>
 <body>
@@ -18,27 +21,35 @@
             <a href="#skills">Skills</a>
             <a href="#portfolio">Projects</a>
             <a href="#contact">Contact</a>
+            <button id="theme-toggle" class="text-gray-600 hover:text-gray-900">
+    <i class="fas fa-moon"></i>
+</button>
         </nav>
+        
     </header>
     
-    <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hi, I'm</h3>
-            <h1>Zakeer Ahamad Shaik</h1>
-            <h3>And I'm a Software Engineer</h3>
-            <p>I am a final year BTech student at Amrita Vishwa Vidyapeetham University, India, with a passion for software development and practical experience. I am skilled in Python, SQL, HTML, CSS, and more. Check out my projects on GitHub!</p>
-            <div class="social-media">
-                <a href="https://www.facebook.com/share/nRN92NAHE7C1JniF/?mibextid=qi2Omg" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://x.com/Jack_Q1?t=TbKq_hEvgGmH5v2sv3O1Pw&s=09" target="_blank" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.instagram.com/z_za_ak_ke_ee_er_r?igsh=a2FvNzRic3RpdG5u" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/zakeer7" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <section class="home bg-gray-100 py-16">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+        <div class="home-content text-center md:text-left">
+            <h3 class="text-xl text-gray-600">Hi, I'm</h3>
+            <h1 class="text-4xl font-bold mt-2">Zakeer Ahamad Shaik</h1>
+            <h3 class="text-xl text-gray-600 mt-2">And I'm a Software Engineer</h3>
+            <p class="mt-4 text-gray-700 max-w-md">
+                I am a final year BTech student at Amrita Vishwa Vidyapeetham University, India, with a passion for software development and practical experience.
+            </p>
+            <div class="social-media flex justify-center md:justify-start mt-6 space-x-4">
+                <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fab fa-linkedin"></i></a>
             </div>
-            <a href="https://www.dropbox.com/scl/fi/n0ypgqdgpphxg0uiy15cn/resume_updated.pdf?rlkey=pfbjiatbpgce7n9wzgcxsddcz&st=hchtkuad&dl=0" class="btn" download>Download CV</a>
+            <a href="#" class="btn mt-6 inline-block bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">Download CV</a>
         </div>
-        <div class="home-img">
-            <img src="me.jpg" alt="Profile Picture">
+        <div class="home-img mt-8 md:mt-0">
+            <img src="me.jpg" alt="Profile Picture" class="rounded-full w-48 h-48 object-cover shadow-lg">
         </div>
-    </section>
+    </div>
+</section>
     
     <section class="about" id="about">
         <h2>About Me</h2>
