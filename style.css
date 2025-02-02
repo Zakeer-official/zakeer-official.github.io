@@ -10,7 +10,7 @@ body {
     line-height: 1.6;
     color: #333;
 }
-
+/* Navbar Styles */
 .header {
     display: flex;
     justify-content: space-between;
@@ -19,6 +19,65 @@ body {
     background: #333;
     color: #fff;
 }
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.navbar a.active {
+    border-bottom: 2px solid #fff;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dark Mode Toggle */
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+#theme-toggle:hover {
+    color: #ddd;
+}
+
 
 .btn {
     display: inline-block;
@@ -40,16 +99,6 @@ body {
     text-transform: uppercase;
     color: #fff;
     text-decoration: none;
-}
-
-.header .navbar a {
-    color: #fff;
-    margin: 0 1rem;
-    text-decoration: none;
-}
-
-.header .navbar a.active {
-    border-bottom: 2px solid #fff;
 }
 
 .home {
@@ -226,34 +275,8 @@ section {
     background-color: #4338ca;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
 
-.dropdown-content a {
-    color: #fff;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #555;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
 .modal {
     display: none;
     position: fixed;
