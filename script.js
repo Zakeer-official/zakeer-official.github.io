@@ -105,3 +105,20 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
+const modal = document.getElementById('contact-modal');
+const openModalBtn = document.getElementById('open-modal');
+const closeModalBtn = document.getElementById('close-modal');
+
+openModalBtn.addEventListener('click', () => {
+    modal.style.display = 'block';
+});
+
+closeModalBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+});
