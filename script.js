@@ -77,6 +77,13 @@ document.querySelectorAll('.dropdown').forEach(dropdown => {
     });
 });
 
+// Prevent Dropdown from Closing on Click Inside
+document.querySelectorAll('.dropdown-content').forEach(dropdownContent => {
+    dropdownContent.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+});
+
 // Dark Mode Toggle
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
@@ -102,7 +109,7 @@ document.querySelectorAll('.navbar a').forEach(anchor => {
     });
 });
 
-
+// Contact Modal
 const modal = document.getElementById('contact-modal');
 const openModalBtn = document.getElementById('open-modal');
 const closeModalBtn = document.getElementById('close-modal');
@@ -119,4 +126,39 @@ window.addEventListener('click', (e) => {
     if (e.target === modal) {
         modal.style.display = 'none';
     }
+});
+
+// Close Modal on Escape Key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
+        modal.style.display = 'none';
+    }
+});
+
+// Contact Form Submission
+const contactForm = document.getElementById('contact-form');
+
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault(); // Prevent default form submission
+
+    // Get form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Validate form data
+    if (!name || !email || !message) {
+        alert('Please fill out all fields.');
+        return;
+    }
+
+    // Simulate form submission (replace with actual backend logic)
+    console.log('Form submitted:', { name, email, message });
+    alert('Thank you for your message! I will get back to you soon.');
+
+    // Clear the form
+    contactForm.reset();
+
+    // Close the modal
+    modal.style.display = 'none';
 });
