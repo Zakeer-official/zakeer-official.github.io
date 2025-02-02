@@ -209,6 +209,23 @@ section {
     color: #555;
 }
 
+.dark {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.dark .header {
+    background-color: #333;
+}
+
+.dark .btn {
+    background-color: #4f46e5;
+}
+
+.dark .btn:hover {
+    background-color: #4338ca;
+}
+
 @media (max-width: 768px) {
     .navbar {
         display: none;
